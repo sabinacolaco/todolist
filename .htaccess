@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /todolist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^$ index.php [QSA,NC,L]
+RewriteRule ^upcoming-tasks$ upcoming.php [QSA,NC,L]
+RewriteRule ^completed-tasks$ completed.php [QSA,NC,L]
+RewriteRule ^overdue-tasks$ overdue.php [QSA,NC,L]
+RewriteRule ^api-tasks$ api/v1/api.php?request=tasks [QSA,NC,L]
+RewriteRule ^api-addtask$ api/v1/api.php?request=addtask [QSA,NC,L]
+RewriteRule ^api-edittask/(.*)$ api/v1/api.php?request=edittask&id=$1 [QSA,NC,L]
+RewriteRule ^api-deletetask$ api/v1/api.php?request=deletetask [QSA,NC,L]
+</IfModule>
+
+

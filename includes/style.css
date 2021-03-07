@@ -1,0 +1,7 @@
+.header{padding:20px;text-align:center;background:#1abc9c;color:white;font-size:30px;margin-top:20px;}
+.footer{height:40px;}
+.bottom-buffer{margin-bottom:20px;}
+.tickmark{text-align:center;font-size:150%;font-weight:bold;color:green;}
+.mb-20{margin-bottom:20px;}
+label.required:not(:empty):after,.field-header.required:after{content:" *";color:red;}
+.error-messages{color:red;font-size:12px;}
