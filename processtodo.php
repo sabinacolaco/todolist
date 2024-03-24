@@ -125,7 +125,7 @@ class ProcessToDo {
     */
     public function deleteTask()
     {
-        echo $sql = "DELETE FROM todolist WHERE id=".$_GET['deltaskId'];
+        $sql = "DELETE FROM todolist WHERE id=".$_GET['deltaskId'];
         
         if(mysqli_query($this->db, $sql)){
             
