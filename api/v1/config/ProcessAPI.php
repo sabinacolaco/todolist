@@ -3,6 +3,8 @@ require_once 'API.php';
 
 class ProcessAPI extends API
 {
+    protected $task;
+    
     public function __construct($request)
     {
         parent::__construct($request);        
