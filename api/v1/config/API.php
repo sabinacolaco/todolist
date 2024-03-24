@@ -7,6 +7,7 @@ abstract class API
     protected $method = '';
     protected $endpoint = '';
     protected $db;
+    protected $customer;
     protected $task = [];
     
     public function __construct($request)
