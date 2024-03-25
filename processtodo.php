@@ -231,23 +231,18 @@ class ProcessToDo {
         $param_date = date('d-m-Y',strtotime($date));
         
         if ($param_date == date('d-m-Y',strtotime("now"))) {
-            
             $response = 'Today, ' . date('g:i A', strtotime($date));
         }
         else if($param_date == date('d-m-Y',strtotime("1 days"))) {
-            
             $response = 'Tommorow, '. date('g:i A', strtotime($date));
         }
         else if($param_date == date('d-m-Y',strtotime("-1 days"))) {
-            
             $response = 'Yesterday'; 
         }
         else {
-            
             $response =  date('D, M d, Y, g:i A', strtotime($date));
         }
         
         return $response;
     }
 }
-?>
