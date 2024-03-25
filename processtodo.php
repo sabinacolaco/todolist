@@ -159,7 +159,6 @@ class ProcessToDo {
         $task     = !empty($_POST['inputTask']) ? $this->validate_data($_POST['inputTask']) : NULL;
         $due_date = !empty($_POST['inputDuedate']) ? $this->validate_data($_POST['inputDuedate']) : NULL;
         $due_date = !empty($due_date) ? date('Y-m-d H:i:s', strtotime($due_date)) : NULL;
-        $created_date = date('Y-m-d H:i:s');
         
         $sql = "UPDATE todolist SET task='$task', due_date='$due_date' WHERE id=$id";
         if(mysqli_query($this->db, $sql)) {
