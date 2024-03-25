@@ -22,19 +22,15 @@ class ProcessAPI extends API
         if (!empty($_REQUEST['request'])  && !empty($_SERVER['REQUEST_METHOD'])) {    
             
             if (($_REQUEST['request'] === 'tasks') && ($_SERVER['REQUEST_METHOD'] == 'GET')) { 
-    
                 return $this->listcurrentTasks();
             } 
             else if (($_REQUEST['request'] === 'addtask') && ($_SERVER['REQUEST_METHOD'] == 'POST')) {
-                
                 return $this->addTask();
             }
             else if (($_REQUEST['request'] === 'edittask') && ($_SERVER['REQUEST_METHOD'] == 'PUT') && (!empty($_REQUEST['id']))) {
-                
                 return $this->editTask();
             }
             else if (($_REQUEST['request'] === 'deletetask') && ($_SERVER['REQUEST_METHOD'] == 'DELETE')) {
-                
                 return $this->deleteTask();
             }
         }
